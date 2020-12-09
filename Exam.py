@@ -25,13 +25,13 @@ def perdu(tableau_joueur,tableau_mm):
 
 def victoire(tableau_joueur,tableau_mm):
     for i in range(0,7):
-        if(tableau_joueur[1-7] == tableau_mm[1] and tableau_mm[2] and tableau_mm[3] and tableau_mm[4] and tableau_mm[5] and tableau_mm[6]):
+        if(tableau_joueur[1] and tableau_joueur[2] and tableau_joueur[3] and tableau_joueur[4] and tableau_joueur[5] and tableau_joueur[6] == tableau_mm[1] and tableau_mm[2] and tableau_mm[3] and tableau_mm[4] and tableau_mm[5] and tableau_mm[6]):
             print("Vous avez gagné !")
     return
 
-def recommencer(tableau_joueur, tableau_mm):
+def recommencer(tableau_joueur,tableau_mm):
 	for i in range(0,7):
-		if(tableau_joueur[1-7] != tableau_mm[1] or tableau_mm[2] or tableau_mm[3] or tableau_mm[4] or tableau_mm[5] or tableau_mm[6]):
+		if(tableau_joueur[1] or tableau_joueur[2] or tableau_joueur[3] or tableau_joueur[4] or tableau_joueur[5] or tableau_joueur[6] != tableau_mm[1] or tableau_mm[2] or tableau_mm[3] or tableau_mm[4] or tableau_mm[5] or tableau_mm[6]):
 			print("Votre mot ne correspond pas au mot mystère !")
 	return
 
@@ -48,5 +48,6 @@ for x in range(1):
         print(tableau_base)
         tour+=1
         continue
+	
 
 input()

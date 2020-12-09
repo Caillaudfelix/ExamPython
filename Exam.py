@@ -14,6 +14,7 @@ from colorama import Fore, Back
 mot_mystere=mot5
 tour=1
 tableau_base=["_","_","_","_","_","_"]
+nbrTableauBase=8
 tableau_mm=["r","e","n","a","r","d",]
 tableau_joueur=[" "]
 
@@ -78,7 +79,9 @@ def mauvaiseLettre6(tableau_joueur,tableau_mm):
 	return
 
 
-print(tableau_base)
+for i in range(nbrTableauBase):
+	print(tableau_base)
+	nbrTableauBase=nbrTableauBase-1
 guess=input("Quel est votre choix ?")
 for x in range(1):
     nbrLettres=len(guess)
@@ -88,7 +91,6 @@ for x in range(1):
     else:
         tableau_joueur[x]=guess
         print(tableau_joueur)
-        print(tableau_base)
         tour+=1
         continue
 	
